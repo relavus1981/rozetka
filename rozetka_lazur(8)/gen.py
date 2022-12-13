@@ -24,9 +24,9 @@ hub = []
 
 for i in dns.rolet:
     for j in dns.price.keys():
-        sku = f'voda{i[0]}{j}'
-        title = f'Рулонная штора вода {i[0]} Decoharm {j}x170 см {i[1]}'
-        title_ua = f'Рулонна штора вода {i[0]} DecoSharm {j}x170 см {i[2]}'
+        sku = f'lazur{i[0]}{j}'
+        title = f'Рулонная штора лазур {i[0]} Decoharm {j}x170 см {i[1]}'
+        title_ua = f'Рулонна штора лазур {i[0]} DecoSharm {j}x170 см {i[2]}'
         image = i[3]
         size = j
         price = round(dns.price[j] * dns.kurs * dns.nacenka)
@@ -63,7 +63,7 @@ for item in hub:
     my_file.write(f'<param name="Страна-производитель товара" paramid="98900">Украина</param>\n')
     my_file.write(f'<param name="100% светонепроницаемость" paramid="127260">Нет</param>\n')
     my_file.write(f'<param name="Гарантия" paramid="20769">12 месяцев</param>\n')
-    my_file.write(f'<param name="Тип" paramid="95278"><![CDATA[ Ролеты тканевые, Рулонные шторы ]]></param>\n')
+    my_file.write(f'<param name="Тип" paramid="95278"><![CDATA[ Рулонные шторы, Ролеты тканевые ]]></param>\n')
     my_file.write(f'<param name="Механизм" paramid="95327"><![CDATA[ Цепочный, Навесной, На крючках ]]></param>\n')
     my_file.write('</offer>\n')
 my_file.close()
