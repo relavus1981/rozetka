@@ -1,0 +1,20 @@
+cd projekt/rozetka
+
+
+python3 rozetka_den_noch_odnoton\(1\)/gen_start.py && 
+python3 rozetka_den_noch_odnoton\(1\)/gen.py && 
+python3 rozetka_blekaut_silver\(2\)/gen.py && 
+python3 rozetka_len\(3\)/gen.py && 
+python3 rozetka_blekaut_bo\(4\)/gen.py && 
+python3 rozetka_blekaut_zvet\(5\)/gen.py && 
+python3 rozetka_natura\(6\)/gen.py && 
+python3 rozetka_voda\(7\)/gen.py && 
+python3 rozetka_lazur\(8\)/gen.py && 
+python3 rozetka_akant\(9\)/gen.py && 
+python3 rozetka_nil\(10\)/gen.py && 
+python3 rozetka_perla\(11\)/gen.py && 
+python3 rozetka_topaz\(12\)/gen.py && 
+python3 rozetka_agat\(13\)/gen.py && 
+python3 rozetka_blekaut_silver\(2.2\)/gen.py && 
+python3 rozetka_den_noch_odnoton\(1\)/gen_end.py
+
