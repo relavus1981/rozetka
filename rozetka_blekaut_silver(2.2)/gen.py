@@ -27,9 +27,9 @@ hub = []
 
 for i in dns.products:
     for j in dns.price.keys():
-        sku = f'silver{i["tkan"]}{j}'
-        title = f'Рулонная штора термо {i["tkan"]} (ролета блэкаут) солнцезащитная светонепроницаемая DecoSharm {j}x170 см {i["color_ru"].capitalize()}'
-        title_ua = f'Рулонна штора термо {i["tkan"]} (ролета блекаут) сонцезахисна світлонепроникна DecoSharm {j}x170 см {i["color_ua"].capitalize()}'
+        sku = f'termo{i["tkan"]}{j}'
+        title = f'Рулонная штора термо {i["tkan"]} блэкаут DecoSharm {j}x170 см {i["color_ru"].capitalize()}'
+        title_ua = f'Рулонна штора термо {i["tkan"]} блекаут DecoSharm {j}x170 см {i["color_ua"].capitalize()}'
         image = i['img']
         size = j
         price = round(dns.price[j] * dns.kurs * dns.nacenka)
