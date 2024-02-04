@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2022-11-06 19:33">
+<shop>
+<name>RolloLine</name>
+<company>ФОП Мельник Р. А.</company>
+<url>https://snug.biz.ua</url>
+<currencies>
+<currency id="UAH" rate="1"/>
+</currencies>
+<categories>
+<category id="1" rz_id="4627673">Жалюзи и ролеты</category>
+</categories>
+<offers>
+</offers>
+</shop>
+</yml_catalog>
