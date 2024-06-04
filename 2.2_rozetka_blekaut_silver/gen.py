@@ -32,7 +32,7 @@ for i in dns.products:
         title_ua = f'Рулонна штора термо {i["tkan"]} блекаут DecoSharm {j}x170 см {i["color_ua"].capitalize()}'
         image = i['img']
         size = j
-        price = round(dns.price[j] * dns.kurs * dns.nacenka)
+        price = round(dns.price[j] * dns.kurs * dns.nacenka + 70)
         price_promo = round(dns.price[j] * dns.kurs * dns.nacenka * dns.promo_skidka)
         color = i['ottenok']
         color_cod = i['ottenok_valuecode']

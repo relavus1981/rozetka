@@ -29,7 +29,7 @@ for i in dns.rolet:
         title_ua = f'Рулонна штора перла {i[0]} DecoSharm {j}x170 см {i[2]}'
         image = i[3]
         size = j
-        price = round(dns.price[j] * dns.kurs * dns.nacenka)
+        price = round(dns.price[j] * dns.kurs * dns.nacenka + 70)
         price_promo = round(dns.price[j] * dns.kurs * dns.nacenka * dns.promo_skidka)
         color = i[1]
         color_ua = i[2]
