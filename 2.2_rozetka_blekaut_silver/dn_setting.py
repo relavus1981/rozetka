@@ -1,4 +1,4 @@
-kurs = 43
+kurs = 45.9
 nacenka = 1.45
 promo_skidka = 0.95
 

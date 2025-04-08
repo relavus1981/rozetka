@@ -21,7 +21,11 @@ class PromItem:
     def __repr__(self):
         return self.title
 
-
+def get_price(width):
+    if width <= 150:
+        return round(8.55 + (width - 30) * 0.15, 2)
+    else:
+        return round(27.6 + (width - 150) * 0.15, 2)
 
 hub = []
 
@@ -32,7 +36,7 @@ for i in dns.products:
         title_ua = f'Рулонна штора термо {i["tkan"]} блекаут DecoSharm {j}x170 см {i["color_ua"].capitalize()}'
         image = i['img']
         size = j
-        price = round(dns.price[j] * dns.kurs * dns.nacenka + 70)
+        price = round(get_price(j) * dns.kurs * dns.nacenka)
         price_promo = round(dns.price[j] * dns.kurs * dns.nacenka * dns.promo_skidka)
         color = i['ottenok']
         color_cod = i['ottenok_valuecode']
