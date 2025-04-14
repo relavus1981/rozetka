@@ -19,6 +19,11 @@ class PromItem:
         return self.title
 
 
+def get_price(width):
+    if width < 170:
+        return round(9.6 + (width - 30) * 0.16, 2)
+    else:
+        return round(47.21 + (width - 170) * 0.25, 2)
 
 hub = []
 
@@ -29,7 +34,7 @@ for i in dns.rolet:
         title_ua = f'Ролета день ніч DecoSharm {j}x160 см {i[2]}'
         image = i[4]
         size = j
-        price = round(dns.price[j] * dns.kurs * dns.nacenka)
+        price = round(get_price(j) * dns.kurs * dns.nacenka)
         price_promo = round(dns.price[j] * dns.kurs * dns.nacenka * dns.promo_skidka)
         color = i[1]
         color_ua = i[2]
@@ -44,7 +49,7 @@ for item in hub:
     my_file.write(f'<offer id="{item.sku}" available="true">\n')
     my_file.write(f'<price>{item.price}</price>\n')
     my_file.write(f'<price_promo>{item.price_promo}</price_promo>\n')
-    my_file.write('<stock_quantity>10</stock_quantity>\n')
+    my_file.write('<stock_quantity>100</stock_quantity>\n')
     my_file.write('<currencyId>UAH</currencyId>\n')
     my_file.write('<categoryId>1</categoryId>\n')
     my_file.write(f'<picture>{item.image}</picture>\n')

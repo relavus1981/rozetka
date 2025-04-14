@@ -22,7 +22,7 @@ class PromItem:
         return self.title
 
 def get_price(width):
-    if width <= 150:
+    if width < 150:
         return round(8.55 + (width - 30) * 0.15, 2)
     else:
         return round(27.6 + (width - 150) * 0.15, 2)
@@ -92,7 +92,7 @@ for item in hub:
     my_file.write(f'<offer id="{item.sku}" available="true">\n')
     my_file.write(f'<price>{item.price}</price>\n')
     my_file.write(f'<price_promo>{item.price_promo}</price_promo>\n')
-    my_file.write('<stock_quantity>10</stock_quantity>\n')
+    my_file.write('<stock_quantity>100</stock_quantity>\n')
     my_file.write('<currencyId>UAH</currencyId>\n')
     my_file.write('<categoryId>1</categoryId>\n')
     my_file.write(f'<picture>{item.image}</picture>\n')
