@@ -1,5 +1,11 @@
 import dn_setting as dns
 from itertools import cycle
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'config')))
+
+import settings as set
 
 
 class PromItem:
@@ -18,7 +24,11 @@ class PromItem:
     def __repr__(self):
         return self.title
 
-
+def get_price(width):
+    if width < 150:
+        return round(8.55 + (width - 30) * 0.15, 2)
+    else:
+        return round(27.6 + (width - 150) * 0.15, 2)
 
 hub = []
 
@@ -29,8 +39,8 @@ for i in dns.rolet:
         title_ua = f'Рулонні штори блекаут DecoSharm {j}x170 см {i[2]}'
         image = i[3]
         size = j
-        price = round(dns.price[j] * dns.kurs * dns.nacenka + 70)
-        price_promo = round(dns.price[j] * dns.kurs * dns.nacenka * dns.promo_skidka)
+        price = round(get_price(j) * set.kurs * dns.nacenka)
+        price_promo = round(dns.price[j] * set.kurs * dns.nacenka * dns.promo_skidka)
         color = i[1]
         color_ua = i[2]
         description = dns.description
@@ -44,7 +54,7 @@ for item in hub:
     my_file.write(f'<offer id="{item.sku}" available="true">\n')
     my_file.write(f'<price>{item.price}</price>\n')
     my_file.write(f'<price_promo>{item.price_promo}</price_promo>\n')
-    my_file.write('<stock_quantity>10</stock_quantity>\n')
+    my_file.write('<stock_quantity>100</stock_quantity>\n')
     my_file.write('<currencyId>UAH</currencyId>\n')
     my_file.write('<categoryId>1</categoryId>\n')
     my_file.write(f'<picture>{item.image}</picture>\n')

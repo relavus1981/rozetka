@@ -1,5 +1,11 @@
 import dn_setting as dns
 from itertools import cycle
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'config')))
+
+import settings as set
 
 
 class PromItem:
@@ -36,8 +42,8 @@ for i in dns.products:
         title_ua = f'Рулонна штора термо {i["tkan"]} блекаут DecoSharm {j}x170 см {i["color_ua"].capitalize()}'
         image = i['img']
         size = j
-        price = round(get_price(j) * dns.kurs * dns.nacenka)
-        price_promo = round(dns.price[j] * dns.kurs * dns.nacenka * dns.promo_skidka)
+        price = round(get_price(j) * set.kurs * dns.nacenka)
+        price_promo = round(dns.price[j] * set.kurs * dns.nacenka * dns.promo_skidka)
         color = i['ottenok']
         color_cod = i['ottenok_valuecode']
         bcolor = i['basic_color']
